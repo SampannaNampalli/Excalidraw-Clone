@@ -1,9 +1,9 @@
 # Excalidraw-Style Canvas (Next.js + Recoil)
 
 ## Problem → Action → Result (student lens)
-- **Problem**: You want to learn how tools like Excalidraw combine React, canvas rendering, and state management to build a fluid diagramming experience (freehand, shapes, text, pan/zoom, undo/redo) without getting lost in a huge codebase.
-- **Action**: Build and study this focused clone built with the modern Next.js app router, Recoil for shared UI state, Tailwind for styling, and RoughJS/perfect-freehand for sketchy strokes. Trace how tools are wired to drawing logic in the canvas component and supporting hooks.
-- **Result**: You get a working whiteboard: draw rectangles/circles/lines/arrows, freehand sketch, type text, pick colors, adjust stroke width/style, pan/zoom, select/move/resize, and undo/redo changes—gaining practical insight into how Excalidraw-like apps are architected.
+- **Problem**: I wanted to learn how tools like Excalidraw combine React, canvas rendering, and state management to build a fluid diagramming experience (freehand, shapes, text, pan/zoom, undo/redo) without getting lost in a huge codebase.
+- **Action**: Built this focused clone with the modern Next.js app router, Recoil for shared UI state, Tailwind for styling, and RoughJS/perfect-freehand for sketchy strokes. I studied how how tools are wired to drawing logic in the canvas component and supporting hooks.
+- **Result**: I was able to get the final product I wanted, a working whiteboard: draw rectangles/circles/lines/arrows, freehand sketch, type text, pick colors, adjust stroke width/style, pan/zoom, select/move/resize, and undo/redo changes, while also gaining practical insight into how Excalidraw-like apps are architected and built.
 
 ## Features
 - Freehand drawing with smooth strokes (perfect-freehand) and sketchy shapes (RoughJS).
@@ -44,7 +44,7 @@ If `npm run dev` fails, ensure Node is up to date and the lockfile is consistent
 - Undo/redo is implemented by pushing immutable snapshots of the element list while drawing.
 - Text input is handled via an overlayed textarea positioned at the click point, then baked into the canvas elements list on blur.
 
-## Learning Path for Students
+## Learning Path for Students that I followed
 1. **Read the canvas flow**: Start with [app/_components/canvas.tsx](app/_components/canvas.tsx) to see how mouse events map to draw/select/resize/pan actions.
 2. **Study state management**: Open [state.ts](state.ts) and related hooks in [hooks](hooks) to see how tool and style choices propagate through the UI.
 3. **Inspect utilities**: Review [lib/utils.ts](lib/utils.ts) for hit-testing, coordinate transforms, and resize math.
