@@ -6,7 +6,7 @@ import {
     strokeColorState,
     strokeWidthState,
 } from "@/state";
-import { ShapesType } from "@/types";
+import { ShapeType } from "@/types";
 
 import { useState } from "react";
 import { useRecoilState } from "recoil";
@@ -20,7 +20,7 @@ interface ShapeReturnType {
     x2: number;
     y2: number;
     roughElement: Drawable | undefined;
-    shape: ShapesType;
+    shape: ShapeType;
     isSelected?: boolean;
 }
 
@@ -198,7 +198,7 @@ export const useShapeDrawing = (roughCanvas: RoughCanvas | null) => {
         y1: number,
         x2: number,
         y2: number,
-        shape: ShapesType
+        shape: ShapeType
     ) => {
         setIsDrawingShapes(true);
 
@@ -226,7 +226,7 @@ export const useShapeDrawing = (roughCanvas: RoughCanvas | null) => {
         y1: number,
         x2: number,
         y2: number,
-        shapeType: ShapesType,
+        shapeType: ShapeType,
         options?: ResolvedOptions,
         isSelected?: boolean
     ) => {

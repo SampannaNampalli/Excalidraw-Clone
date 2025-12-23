@@ -7,14 +7,13 @@ export const useSelectionTool = () => {
 
     const handleMouseDown = (e: React.MouseEvent) => {
         const { x, y } = getScaledCoordinates(e.clientX, e.clientY);
-        // Hit detection logic
-        dispatch({ type: "SELECT_ELEMENT", id: detectedElementId });
+        // TODO: implement hit detection; currently clear selection
+        dispatch({ type: "SELECT_ELEMENT", id: null });
     };
 
     const handleMouseMove = (e: React.MouseEvent) => {
-        if (!selectedElement) return;
-        const { x, y } = getScaledCoordinates(e.clientX, e.clientY);
-        dispatch({ type: "UPDATE_ELEMENT", id: selectedElement.id, updates: { x1: x, y1: y } });
+        // Placeholder: selection move not implemented yet
+        return;
     };
 
     return { handleMouseDown, handleMouseMove };
