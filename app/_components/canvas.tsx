@@ -532,7 +532,7 @@ export const Canvas = ({}: { startCollab?: () => void }) => {
         if (toolCursor.tool === "text") {
             textareaRef?.current?.focus();
         }
-    }, [toolCursor]);
+    }, [selectedItem, toolCursor]);
 
     useEffect(() => {
         if (textareaRef.current) {
