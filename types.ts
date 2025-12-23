@@ -22,6 +22,7 @@ export type ToolType =
     | "arrow";
 
 export type ShapeType = "rectangle" | "circle" | "square" | "line" | "pencil" | "text" | "arrow";
+export type ShapesType = "rectangle" | "circle" | "line" | "arrow" | "square";
 export type Point = { x: number; y: number; pressure?: number };
 
 export type DrawnElementType = {
@@ -30,6 +31,7 @@ export type DrawnElementType = {
     y1: number;
     x2: number;
     y2: number;
+    shape: ShapeType;
     roughElement: Drawable | undefined;
     // shape: ShapesType;
     points?: Point[];

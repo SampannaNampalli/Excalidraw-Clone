@@ -14,6 +14,7 @@ export const useDrawingTool = (shapeType: ShapeType) => {
             y1: y,
             x2: x,
             y2: y,
+            shape: shapeType,
             roughElement: undefined,
         };
         dispatch({ type: "ADD_ELEMENT", element: newElement });
